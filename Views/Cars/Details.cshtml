@@ -1,0 +1,64 @@
+﻿@model CarSale.Models.Car
+
+@{
+    ViewBag.Title = "Details of the Car";
+}
+
+<h2>Details of the Car</h2>
+
+<fieldset>
+    <legend>Car</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Model)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Model)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BodyType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BodyType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ModelNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ModelNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FuelType)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FuelType)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ReleaseDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReleaseDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Color)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Color)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
