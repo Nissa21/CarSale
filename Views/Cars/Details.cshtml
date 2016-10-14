@@ -6,59 +6,75 @@
 
 <h2>Details of the Car</h2>
 
+<p>
+    @Html.ActionLink("Update this Vehicle's detals", "Edit", new { id=Model.ID }) 
+    <h></h>
+
+</p>
+
+
+
+
 <fieldset>
     <legend>Car</legend>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Model)
+      <h3> @Html.DisplayNameFor(model => model.Model) </h3>
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Model)
     </div>
+    <h2> </h2>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.BodyType)
+      <h3>    @Html.DisplayNameFor(model => model.BodyType) </h3> 
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.BodyType)
     </div>
+    <h2> </h2>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.ModelNo)
+        <h3>  @Html.DisplayNameFor(model => model.ModelNo) </h3> 
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.ModelNo)
     </div>
+    <h2> </h2>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.FuelType)
+      <h3>    @Html.DisplayNameFor(model => model.FuelType) </h3> 
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.FuelType)
     </div>
+    <h2> </h2>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.ReleaseDate)
+      <h3>    @Html.DisplayNameFor(model => model.ReleaseDate)</h3> 
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.ReleaseDate)
     </div>
+    <h2> </h2>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Color)
+       <h3>   @Html.DisplayNameFor(model => model.Color)</h3> 
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Color)
     </div>
+    <h2> </h2>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Price)
+        <h3>  @Html.DisplayNameFor(model => model.Price)</h3> 
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Price)
     </div>
+
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+
+    @Html.ActionLink("Back to My Vehicles Adverised", "Index")
 </p>

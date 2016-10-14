@@ -1,34 +1,40 @@
 ﻿@model IEnumerable<CarSale.Models.Car>
 
 @{
-    ViewBag.Title = "My Vehicles";
+    ViewBag.Title = "My Advertised Vehicles";
 }
 
-<h2>My Vehicles</h2>
+<h2>My Advertised Vehicles</h2>
 
 <p>
-    @Html.ActionLink("Add Vehicle", "Create")
+    @Html.ActionLink("Sell another Vehicle?", "Create")
 </p>
 <table>
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Model)
         </th>
+               <th></th>
         <th>
             @Html.DisplayNameFor(model => model.BodyType)
         </th>
+                         <td>  </td>
         <th>
             @Html.DisplayNameFor(model => model.ModelNo)
         </th>
+                         <td>  </td>
         <th>
             @Html.DisplayNameFor(model => model.FuelType)
         </th>
+                         <td>  </td>
         <th>
             @Html.DisplayNameFor(model => model.ReleaseDate)
         </th>
+                        
         <th>
             @Html.DisplayNameFor(model => model.Color)
         </th>
+                         <td>  </td>
         <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
@@ -40,28 +46,34 @@
         <td>
             @Html.DisplayFor(modelItem => item.Model)
         </td>
+                      <td>  </td>
         <td>
             @Html.DisplayFor(modelItem => item.BodyType)
         </td>
+                         <td>  </td>
         <td>
             @Html.DisplayFor(modelItem => item.ModelNo)
         </td>
+                         <td>  </td>
         <td>
             @Html.DisplayFor(modelItem => item.FuelType)
         </td>
+                         <td>  </td>
         <td>
             @Html.DisplayFor(modelItem => item.ReleaseDate)
         </td>
+                     
         <td>
             @Html.DisplayFor(modelItem => item.Color)
         </td>
+                         <td>  </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("View Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Update Vehicle Details", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Remove this vehicle?", "Delete", new { id=item.ID })
         </td>
     </tr>
 }

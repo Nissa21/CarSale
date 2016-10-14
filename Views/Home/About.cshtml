@@ -1,10 +1,12 @@
 ﻿@{
-    ViewBag.Title = "About";
+    ViewBag.Title = "About Us";
 }
 
 <hgroup class="title">
     <h1>@ViewBag.Title.</h1>
+    <p>
     <h2>@ViewBag.Message</h2>
+    </p>
 </hgroup>
 
 <article>
@@ -13,8 +15,8 @@
     </p>
 
     <p>
-        At CarSale.com we aim to provide a streamlined car buying and selling process and allow our customers to be confident when it comes to trading vehicles through us.
-        changed
+        At CarSale.com we aim to provide a streamlined vehicle buying and selling process and allow our customers to be confident when it comes to trading vehicles through us.
+        
     </p>
 
     <p>
@@ -23,13 +25,14 @@
 </article>
 
 <aside>
-    <h3>Aside Title</h3>
+    <h3>CarSale</h3>
     <p>
-        Use this area to provide additional information.
+        Meet CarSale.
     </p>
     <ul>
         <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("About Us", "About", "Home")</li>
         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <li>@Html.ActionLink("Sell a Car", "Create", "Cars")</li>   
     </ul>
 </aside>
