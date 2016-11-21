@@ -3,6 +3,7 @@ using System.Data.Entity;
 
 namespace CarSale.Models
 {
+   
     public class Car
     {
 
@@ -15,6 +16,7 @@ namespace CarSale.Models
         public DateTime ReleaseDate  { get; set; }
         public string Color  { get; set; }
         public decimal Price  { get; set; }
+        public byte[] CarImg { get; set; }
 
     }
 

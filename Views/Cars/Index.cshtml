@@ -1,20 +1,26 @@
 ﻿@model IEnumerable<CarSale.Models.Car>
 
+
 @{
     ViewBag.Title = "My Advertised Vehicles";
 }
 
-<h2>My Advertised Vehicles</h2>
+<h1>My Advertised Vehicles</h1>
 
-<p>
-    @Html.ActionLink("Sell another Vehicle?", "Create")
-</p>
+
+   <h2> @Html.ActionLink("Sell another Vehicle?", "Create")</h2>
+
+
 <table>
     <tr>
+                <th>
+            @Html.DisplayNameFor(model => model.CarImg)
+        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.Model)
         </th>
-               <th></th>
+                         <td>  </td>
         <th>
             @Html.DisplayNameFor(model => model.BodyType)
         </th>
@@ -30,7 +36,7 @@
         <th>
             @Html.DisplayNameFor(model => model.ReleaseDate)
         </th>
-                        
+                          <td>  </td>         
         <th>
             @Html.DisplayNameFor(model => model.Color)
         </th>
@@ -41,8 +47,28 @@
         <th></th>
     </tr>
 
+
+
+
+
+
 @foreach (var item in Model) {
     <tr>
+
+        <td>
+
+           @{
+                var base64 = Convert.ToBase64String(item.CarImg);
+               var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            }
+
+            <img height="50" width="75" src="@imgSrc" />
+
+        </td>
+
+
+
+
         <td>
             @Html.DisplayFor(modelItem => item.Model)
         </td>
@@ -62,7 +88,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.ReleaseDate)
         </td>
-                     
+                                             <td>  </td>
         <td>
             @Html.DisplayFor(modelItem => item.Color)
         </td>
@@ -76,6 +102,18 @@
             @Html.ActionLink("Remove this vehicle?", "Delete", new { id=item.ID })
         </td>
     </tr>
+    
+    
+    
+    
+    
+    
 }
 
 </table>
+
+
+
+
+
+

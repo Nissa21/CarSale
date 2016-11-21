@@ -1,7 +1,7 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Home Page";
 }
-
 
 
 
@@ -12,10 +12,13 @@
                 <h1>@ViewBag.Title.</h1>
                  <p>
                   <h2>@ViewBag.Message</h2>
+
                  </p>
             </hgroup>
             <p>
                
+               <h1>    @Html.ActionLink("Search a Vehicle", "SearchIndex", "Cars")  <h1>
+
             </p>
         </div>
     </section>
@@ -34,3 +37,6 @@
         
     </li>
 </ol>
+
+
+

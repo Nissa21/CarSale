@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CarSale.Models;
+using System.Diagnostics;
 
 namespace CarSale.Controllers
 {
@@ -46,10 +47,22 @@ namespace CarSale.Controllers
         // POST: /Cars/Create
 
         [HttpPost]
-        public ActionResult Create(Car car)
+        public ActionResult Create(Car car, HttpPostedFileBase file)
         {
+
+
             if (ModelState.IsValid)
             {
+
+               car.CarImg = new byte[file.ContentLength];
+               file.InputStream.Read(car.CarImg,0, file.ContentLength);
+
+               Debug.WriteLine("CarImg value:"+file.ContentLength);
+               Debug.WriteLine("This is the file:" + file);
+
+
+
+
                 db.Cars.Add(car);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -127,21 +140,12 @@ namespace CarSale.Controllers
             }
 
 
-
-
+            
 
             return View(cars);
         }
 
-
-
-
-
-
-
-
-
-
+        
         //
         // POST: /Cars/Delete/5
 

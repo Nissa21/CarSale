@@ -6,7 +6,8 @@
 
 <h2>Add Vehicle Details</h2>
 
-@using (Html.BeginForm()) {
+@using(Html.BeginForm(null,null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
     @Html.ValidationSummary(true)
 
     <fieldset>
@@ -67,6 +68,19 @@
             @Html.EditorFor(model => model.Price)
             @Html.ValidationMessageFor(model => model.Price)
         </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CarImg)
+         </div>
+
+        <div class="editor-field">
+            <input type="file" name ="file" />
+
+        </div>
+
+
+
+
 
         <p>
             <input type="submit" value="Publish" />

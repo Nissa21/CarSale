@@ -7,16 +7,24 @@
 <h2>Details of the Car</h2>
 
 <p>
-    @Html.ActionLink("Update this Vehicle's detals", "Edit", new { id=Model.ID }) 
+    @Html.ActionLink("Update this Vehicle's details", "Edit", new { id=Model.ID }) 
     <h></h>
 
 </p>
 
 
-
-
 <fieldset>
     <legend>Car</legend>
+
+               @{
+                var base64 = Convert.ToBase64String(Model.CarImg);
+               var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            }
+
+            <img height="150" width="250" src="@imgSrc" />
+
+
+
 
     <div class="display-label">
       <h3> @Html.DisplayNameFor(model => model.Model) </h3>

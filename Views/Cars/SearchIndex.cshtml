@@ -4,7 +4,7 @@
     ViewBag.Title = "SearchIndex";
 }
 
-<h2>SearchIndex</h2>
+<h2>Search a Vehicle</h2>
 
 <p>
     
@@ -19,57 +19,95 @@
 </p>
 <table>
     <tr>
+
+                        <th>
+            @Html.DisplayNameFor(model => model.CarImg)
+        </th>
+
+
         <th>
             @Html.DisplayNameFor(model => model.Model)
+                                     <td>  </td>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.BodyType)
+                                     <td>  </td>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ModelNo)
+                                     <td>  </td>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FuelType)
+                                     <td>  </td>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ReleaseDate)
+                                     <td>  </td>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Color)
+                                     <td>  </td>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Price)
+                                     <td>  </td>
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+
+
+                <td>
+
+           @{
+                var base64 = Convert.ToBase64String(item.CarImg);
+               var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+            }
+
+            <img height="50" width="75" src="@imgSrc" />
+
+        </td>
+
+
+
+
+
+
+
         <td>
             @Html.DisplayFor(modelItem => item.Model)
+                                     <td>  </td>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.BodyType)
+                                     <td>  </td>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ModelNo)
+                                     <td>  </td>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FuelType)
+                                     <td>  </td>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ReleaseDate)
+                                     <td>  </td>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Color)
+                                     <td>  </td>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
+                                     <td>  </td>
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) 
+                                     <td>  </td>
         </td>
     </tr>
 }
